@@ -9,12 +9,19 @@
     "watch": "webpack --watch",
     "devS": "webpack-dev-server --open"
   },
+  "browserslist": [
+    "> 1%",
+    "last 3 version"
+  ],
   "author": "Alexander",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.0.1",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^6.1.1",
     "css-loader": "^4.3.0",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.10",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^6.1.0",
     "imagemin-webpack-plugin": "^2.4.2",

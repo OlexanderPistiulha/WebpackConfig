@@ -8,6 +8,7 @@ const {
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const autoprefixer = require('autoprefixer');
 
 // условие на тип сборки development or prodaction
 var isProdaction = (process.env.NODE_ENV === 'prodaction');
@@ -54,21 +55,33 @@ module.exports = {
                     MiniCssExtractPlugin.loader,
                     'css-loader',
                 ]
-            },
+            }, 
             {
                 test: /\.scss$/,
                 use: [
                     'style-loader',
                     MiniCssExtractPlugin.loader,
+
                     {
                         loader: 'css-loader',
+                        options: {
+                            sourceMap: true
+                        }
                     },
+                    // {
+                    //     loader: 'postcss-loader',
+                    //     options: {
+                    //         sourceMap: true,
+                    //         config: {
+                    //             path: './js/postcss.config.js'
+                    //         }
+                    //     }
+                    // },
                     {
-                        loader: 'sass-loader',
+                        loader: 'sass-loader'
                     }
-
-                ]
-            }
+                ],
+            },
         ]
     },
 
