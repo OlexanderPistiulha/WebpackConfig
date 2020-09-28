@@ -2,3 +2,10 @@
     margin: 0;
     position: relative;
 }
+
+body {
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
