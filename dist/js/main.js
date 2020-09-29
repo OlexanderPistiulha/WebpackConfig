@@ -86,14 +86,25 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "../node_modules/mini-css-extract-plugin/dist/loader.js!../node_modules/css-loader/dist/cjs.js?!../node_modules/postcss-loader/dist/cjs.js?!../node_modules/sass-loader/dist/cjs.js!./scss/style.scss":
-/*!******************************************************************************************************************************************************************************************************************************!*\
-  !*** ../node_modules/mini-css-extract-plugin/dist/loader.js!../node_modules/css-loader/dist/cjs.js??ref--5-2!../node_modules/postcss-loader/dist/cjs.js??ref--5-3!../node_modules/sass-loader/dist/cjs.js!./scss/style.scss ***!
-  \******************************************************************************************************************************************************************************************************************************/
+/***/ "../node_modules/mini-css-extract-plugin/dist/loader.js!../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./scss/main.scss":
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** ../node_modules/mini-css-extract-plugin/dist/loader.js!../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./scss/main.scss ***!
+  \*********************************************************************************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed (from ../node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ../node_modules/postcss-loader/dist/cjs.js):\nValidationError: Invalid options object. PostCSS Loader has been initialized using an options object that does not match the API schema.\n - options has an unknown property 'config'. These properties are valid:\n   object { postcssOptions?, execute?, sourceMap? }\n    at validate (D:\\web\\WebpackConfig\\node_modules\\postcss-loader\\node_modules\\schema-utils\\dist\\validate.js:98:11)\n    at Object.loader (D:\\web\\WebpackConfig\\node_modules\\postcss-loader\\dist\\index.js:43:28)\n    at D:\\web\\WebpackConfig\\node_modules\\webpack\\lib\\NormalModule.js:316:20\n    at D:\\web\\WebpackConfig\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at D:\\web\\WebpackConfig\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18");
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ "../node_modules/mini-css-extract-plugin/dist/loader.js!../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./scss/two.scss":
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** ../node_modules/mini-css-extract-plugin/dist/loader.js!../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./scss/two.scss ***!
+  \********************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
 
 /***/ }),
 
@@ -404,8 +415,11 @@ function name() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _external__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./external */ "./js/external.js");
-/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../scss/style.scss */ "./scss/style.scss");
-/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_style_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../scss/main.scss */ "./scss/main.scss");
+/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_main_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _scss_two_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../scss/two.scss */ "./scss/two.scss");
+/* harmony import */ var _scss_two_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_scss_two_scss__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 
@@ -418,15 +432,44 @@ console.log('dfdfdfd');
 
 /***/ }),
 
-/***/ "./scss/style.scss":
-/*!*************************!*\
-  !*** ./scss/style.scss ***!
-  \*************************/
+/***/ "./scss/main.scss":
+/*!************************!*\
+  !*** ./scss/main.scss ***!
+  \************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../node_modules/mini-css-extract-plugin/dist/loader.js!../../node_modules/css-loader/dist/cjs.js??ref--5-2!../../node_modules/postcss-loader/dist/cjs.js??ref--5-3!../../node_modules/sass-loader/dist/cjs.js!./style.scss */ "../node_modules/mini-css-extract-plugin/dist/loader.js!../node_modules/css-loader/dist/cjs.js?!../node_modules/postcss-loader/dist/cjs.js?!../node_modules/sass-loader/dist/cjs.js!./scss/style.scss");
+            var content = __webpack_require__(/*! !../../node_modules/mini-css-extract-plugin/dist/loader.js!../../node_modules/css-loader/dist/cjs.js!../../node_modules/postcss-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./main.scss */ "../node_modules/mini-css-extract-plugin/dist/loader.js!../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./scss/main.scss");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+
+
+module.exports = content.locals || {};
+
+/***/ }),
+
+/***/ "./scss/two.scss":
+/*!***********************!*\
+  !*** ./scss/two.scss ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../../node_modules/mini-css-extract-plugin/dist/loader.js!../../node_modules/css-loader/dist/cjs.js!../../node_modules/postcss-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./two.scss */ "../node_modules/mini-css-extract-plugin/dist/loader.js!../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./scss/two.scss");
 
             content = content.__esModule ? content.default : content;
 

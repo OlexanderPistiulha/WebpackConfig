@@ -42,7 +42,7 @@ module.exports = {
 
     //обновление содержимого странички во время азроботки запускаеться командой из консоли npm run devS  что описана в файле package.json
     devServer: {
-        contentBase: path.join(__dirname, 'dist'),
+        contentBase: path.join(__dirname),
         port: 8080
     },
 
@@ -52,10 +52,18 @@ module.exports = {
         rules: [{
                 test: /\.css$/,
                 use: [
+                    'style-loader',
                     MiniCssExtractPlugin.loader,
-                    'css-loader',
+
+                    {
+                        loader: 'css-loader'
+                    },
+
+                    {
+                        loader: "postcss-loader"
+                    }
                 ]
-            }, 
+            },
             {
                 test: /\.scss$/,
                 use: [
@@ -63,23 +71,17 @@ module.exports = {
                     MiniCssExtractPlugin.loader,
 
                     {
-                        loader: 'css-loader',
-                        options: {
-                            sourceMap: true
-                        }
+                        loader: 'css-loader'
                     },
-                    // {
-                    //     loader: 'postcss-loader',
-                    //     options: {
-                    //         sourceMap: true,
-                    //         config: {
-                    //             path: './js/postcss.config.js'
-                    //         }
-                    //     }
-                    // },
+
+                    {
+                        loader: "postcss-loader"
+                    },
+
                     {
                         loader: 'sass-loader'
                     }
+
                 ],
             },
         ]
@@ -87,7 +89,8 @@ module.exports = {
 
     // условие на development or prodaction
     // обеспеевает  стиль сопоставления источников, чтобы улучшить процесс отладки. 
-    devtool: (isProdaction) ? '' : 'source-map',
+    devtool: (isProdaction) ? '' : 'source-map',    
+    
 
 
     // Поскольку плагины могут принимать аргументы / параметры, вы должны передать новый экземпляр свойству plugins в конфигурации вашего веб-пакета

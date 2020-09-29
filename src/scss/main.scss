@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    position: relative;
+}
+
+body {
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    @media screen and (min-height: 1500px) {
+        position: relative;
+    }
+}
+
+h2 {
+    @media screen and (min-height: 1500px) {
+        padding-bottom: 20px;
+    }
+}

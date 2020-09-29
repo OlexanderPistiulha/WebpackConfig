@@ -1,5 +1,6 @@
 import name from './external';
-import '../scss/style.scss';
+import '../scss/main.scss';
+import '../scss/two.scss';
 
 console.log("efevfhefveh");
 console.log("one point entry");
