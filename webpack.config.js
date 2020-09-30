@@ -8,10 +8,6 @@ const {
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-//const autoprefixer = require('autoprefixer');
-
-// условие на тип сборки development or prodaction
-var isProdaction = (process.env.NODE_ENV === 'prodaction');
 
 module.exports = {
 
@@ -19,7 +15,7 @@ module.exports = {
     context: path.resolve(__dirname, 'src'),
 
     // Параметр режима в конфигурации, по умолчанию development но также модуль указуется в файле packae.json  для dev (--mode development) or build (--mode production)
-    mode: 'development',
+   // mode: 'development',
 
     // Точка или точки, с которых следует начать процесс объединения приложений. Если передан массив, то будут обработаны все элементы.   
     entry: {
@@ -92,7 +88,7 @@ module.exports = {
 
     // условие на development or prodaction
     // обеспеевает  стиль сопоставления источников, чтобы улучшить процесс отладки. 
-    devtool: (isProdaction) ? '' : 'source-map',
+    devtool: 'source-map',
 
 
 

@@ -7,7 +7,7 @@
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "watch": "webpack --watch",
-    "devS": "webpack-dev-server --open"
+    "devS": "webpack-dev-server --open"   
   },
   "browserslist": [
     "> 1%",
