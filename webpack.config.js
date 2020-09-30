@@ -8,7 +8,7 @@ const {
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const autoprefixer = require('autoprefixer');
+//const autoprefixer = require('autoprefixer');
 
 // условие на тип сборки development or prodaction
 var isProdaction = (process.env.NODE_ENV === 'prodaction');
@@ -54,11 +54,12 @@ module.exports = {
                 use: [
                     'style-loader',
                     MiniCssExtractPlugin.loader,
-
                     {
-                        loader: 'css-loader'
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1
+                        },
                     },
-
                     {
                         loader: "postcss-loader"
                     }
@@ -69,14 +70,16 @@ module.exports = {
                 use: [
                     'style-loader',
                     MiniCssExtractPlugin.loader,
-
                     {
-                        loader: 'css-loader'
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1
+                        },
                     },
-
                     {
                         loader: "postcss-loader"
                     },
+
 
                     {
                         loader: 'sass-loader'
@@ -89,8 +92,8 @@ module.exports = {
 
     // условие на development or prodaction
     // обеспеевает  стиль сопоставления источников, чтобы улучшить процесс отладки. 
-    devtool: (isProdaction) ? '' : 'source-map',    
-    
+    devtool: (isProdaction) ? '' : 'source-map',
+
 
 
     // Поскольку плагины могут принимать аргументы / параметры, вы должны передать новый экземпляр свойству plugins в конфигурации вашего веб-пакета
