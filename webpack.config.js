@@ -45,7 +45,14 @@ module.exports = {
     // поддерживает модули, написанные на разных языках, и препроцессоры, через загрузчики.
     // Загрузчики описывают webpack, как обрабатывать модули, не относящиеся к JavaScript, и включать эти зависимости в ваши пакеты. 
     module: {
-        rules: [{
+        rules: [
+            {
+                test: /\.js$/,
+                loader: 'babel-loader',
+                exclude: '/node_modules'
+            },
+
+            {
                 test: /\.css$/,
                 use: [
                     'style-loader',
