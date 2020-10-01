@@ -126,7 +126,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             hash: false,
             template: `${PATHS.src}/index.html`,
-            filename: './index.html'
+            filename: './index.html',
+            minify: false
         }),
         new CopyWebpackPlugin({
             patterns: [{
