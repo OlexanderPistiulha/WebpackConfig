@@ -4,10 +4,10 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "dev": "webpack  --config webpack.dev.conf.js",
-    "build": "webpack --config webpack.build.conf.js",
+    "dev": "webpack  --config build/webpack.dev.conf.js",
+    "build": "webpack --config build/webpack.build.conf.js",
     "watch": "webpack --watch",
-    "devS": "webpack-dev-server --open"
+    "devS": "webpack-dev-server --open  --config build/webpack.dev.conf.js"
   },
   "browserslist": [
     "> 1%",
@@ -24,6 +24,7 @@
     "css-loader": "^4.3.0",
     "css-mqpacker": "^7.0.0",
     "file-loader": "^6.1.0",
+    "html-webpack-plugin": "^4.5.0",
     "imagemin-webpack-plugin": "^2.4.2",
     "img-loader": "^3.0.2",
     "mini-css-extract-plugin": "^0.11.2",
