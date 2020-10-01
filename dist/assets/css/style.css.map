@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///src/scss/two.scss"],"names":[],"mappings":"AAAA,EACI,gBAAiB,C","file":"assets/css/style.css","sourcesContent":["* {\r\n    padding-left: 5px;\r\n}"],"sourceRoot":""}

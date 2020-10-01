@@ -68,6 +68,13 @@ module.exports = {
                 }
             },
             {
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                loader: 'file-loader',
+                options: {
+                    name: `[name].[ext]`,
+                },
+            },
+            {
                 test: /\.css$/,
                 use: [
                     'style-loader',
@@ -108,12 +115,6 @@ module.exports = {
         ]
     },
 
-    // условие на development or prodaction
-    // обеспеевает  стиль сопоставления источников, чтобы улучшить процесс отладки. 
-    // devtool: 'source-map',
-
-
-
     // Поскольку плагины могут принимать аргументы / параметры, вы должны передать новый экземпляр свойству plugins в конфигурации вашего веб-пакета
     plugins: [
         new CleanWebpackPlugin(),
@@ -131,9 +132,15 @@ module.exports = {
         }),
         new CopyWebpackPlugin({
             patterns: [{
-                from: `${PATHS.src}/img`,
-                to: `${PATHS.assets}img`
-            }]
+                    from: `${PATHS.src}/img`,
+                    to: `${PATHS.assets}img`
+                },
+                {
+                    from: `${PATHS.src}/libs/fonts`,
+                    to: `${PATHS.assets}/libs/fonts`
+
+                }
+            ]
 
         })
     ],
