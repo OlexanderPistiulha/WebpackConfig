@@ -1,13 +1,9 @@
-//Модуль path предоставляет утилиты для работы с путями к файлам и директориям.
 const path = require('path');
 
-//подключение плагинов и дальше создание нового плаига в масиве plugins
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {
     CleanWebpackPlugin
 } = require('clean-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const ImageminPlugin = require('imagemin-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
 
@@ -15,7 +11,7 @@ module.exports = {
     context: path.resolve(__dirname, 'src'),
 
     // Параметр режима в конфигурации, по умолчанию development но также модуль указуется в файле packae.json  для dev (--mode development) or build (--mode production)
-   // mode: 'development',
+    // mode: 'development',
 
     // Точка или точки, с которых следует начать процесс объединения приложений. Если передан массив, то будут обработаны все элементы.   
     entry: {
@@ -35,18 +31,8 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         publicPath: '../',
     },
-
-    //обновление содержимого странички во время азроботки запускаеться командой из консоли npm run devS  что описана в файле package.json
-    devServer: {
-        contentBase: path.join(__dirname),
-        port: 8080
-    },
-
-    // поддерживает модули, написанные на разных языках, и препроцессоры, через загрузчики.
-    // Загрузчики описывают webpack, как обрабатывать модули, не относящиеся к JavaScript, и включать эти зависимости в ваши пакеты. 
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.js$/,
                 loader: 'babel-loader',
                 exclude: '/node_modules'
@@ -109,5 +95,4 @@ module.exports = {
             filename: 'css/style.css',
         }),
     ],
-
-};
+}

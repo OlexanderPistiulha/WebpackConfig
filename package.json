@@ -4,8 +4,8 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production",
+    "dev": "webpack  --config webpack.dev.conf.js",
+    "build": "webpack --config webpack.build.conf.js",
     "watch": "webpack --watch",
     "devS": "webpack-dev-server --open"
   },
@@ -35,7 +35,8 @@
     "style-loader": "^1.2.1",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.1.4"
   },
   "dependencies": {
     "cssnano": "^4.1.10"
